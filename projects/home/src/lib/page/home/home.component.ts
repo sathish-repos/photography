@@ -4,12 +4,8 @@ import { Component } from '@angular/core';
   selector: 'lib-home',
   standalone: true,
   imports: [],
-  template: `
-    <p>
-      home works!
-    </p>
-  `,
-  styles: ``
+  templateUrl: './home.component.html',
+  styleUrl: './home.component.scss'
 })
 export class HomeComponent {
 
