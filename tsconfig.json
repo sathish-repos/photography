@@ -7,6 +7,9 @@
     "strict": true,
     "noImplicitOverride": true,
     "paths": {
+      "gallery": [
+        "./dist/gallery"
+      ],
       "home": [
         "./dist/home"
       ]
