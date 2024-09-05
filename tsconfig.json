@@ -12,6 +12,9 @@
       ],
       "home": [
         "./dist/home"
+      ],
+      "shared": [
+        "./dist/shared"
       ]
     },
     "noPropertyAccessFromIndexSignature": true,
