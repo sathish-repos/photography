@@ -4,12 +4,8 @@ import { Component } from '@angular/core';
   selector: 'lib-gallery',
   standalone: true,
   imports: [],
-  template: `
-    <p>
-      gallery works!
-    </p>
-  `,
-  styles: ``
+  templateUrl: './gallery.component.html',
+  styleUrl: './gallery.component.scss'
 })
 export class GalleryComponent {
 
