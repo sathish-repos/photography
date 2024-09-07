@@ -2,11 +2,12 @@ import { Component, signal } from '@angular/core';
 import { HomeTemplateComponent } from '../../feature/home-template/home-template.component';
 import { Home } from './models/home.types';
 import { HomeMocks } from './mocks/home.mocks';
+import { HeaderComponent } from '../../../../../shared/src/lib/components/header/header.component';
 
 @Component({
   selector: 'lib-home',
   standalone: true,
-  imports: [HomeTemplateComponent],
+  imports: [HomeTemplateComponent,HeaderComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
