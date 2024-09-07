@@ -101,6 +101,7 @@
       "projectType": "library",
       "root": "projects/home",
       "sourceRoot": "projects/home/src",
+
       "prefix": "lib",
       "architect": {
         "build": {
@@ -124,6 +125,11 @@
             "tsConfig": "projects/home/tsconfig.spec.json",
             "polyfills": ["zone.js", "zone.js/testing"]
           }
+        }
+      },
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
         }
       }
     },
@@ -155,6 +161,11 @@
             "polyfills": ["zone.js", "zone.js/testing"]
           }
         }
+      },
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
       }
     },
     "shared": {
@@ -184,6 +195,11 @@
             "tsConfig": "projects/shared/tsconfig.spec.json",
             "polyfills": ["zone.js", "zone.js/testing"]
           }
+        }
+      },
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
         }
       }
     }
