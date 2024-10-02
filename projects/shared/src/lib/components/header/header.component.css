@@ -11,3 +11,8 @@
   -webkit-backdrop-filter: blur(16px) saturate(180%);
   background-color: rgba(17, 25, 40, 0.75);
 }
+
+.menu-items li a:hover,
+.menu-items li a.active {
+  color: #fc6060;
+}

@@ -1,5 +1,8 @@
+import { Aboutme } from '../../../feature/about/types/about.types';
+
 export type Home = {
   hero: Hero;
+  about: Aboutme;
 };
 
 export type Hero = {

@@ -1,0 +1,12 @@
+.portfolio {
+  &__heading {
+    color: #fc6060;
+    letter-spacing: 0.6px;
+    text-align: left;
+    text-shadow: 2px 2px 5px beige;
+    font-weight: bolder;
+  }
+  img {
+    width: 100%;
+  }
+}
