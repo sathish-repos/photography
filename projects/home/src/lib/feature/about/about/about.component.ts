@@ -6,6 +6,8 @@ import {
   OnInit,
 } from '@angular/core';
 import { Home } from '../../../page/home/models/home.types';
+import { ImageService } from '../../../../../../shared/src/lib/services/firebase.service';
+import { AngularFireStorage } from '@angular/fire/compat/storage';
 
 @Component({
   selector: 'lib-about',
@@ -17,15 +19,25 @@ import { Home } from '../../../page/home/models/home.types';
 })
 export class AboutComponent {
   content = input.required<Home>();
-  imageUrl!: string;
+  imageUrl: string | void | undefined;
   // private storage = inject(AngularFireStorage);
   // constructor(private imageService: ImageService) {
-  //   AngularFireModule.initializeApp(environment.firebaseConfig);
+  //   // AngularFireModule.initializeApp(environment.firebaseConfig);
   // }
-
+  constructor(private storage: AngularFireStorage) {}
   ngOnInit() {
-    // this.imageService.getImageDownloadURL('me.jpg').subscribe((url) => {
-    //   this.imageUrl = url;
-    // });
+    this.storage.storage
+      .ref('/images')
+      .listAll()
+      .then((result) => {
+        result.items.forEach((item) => {
+          item.getDownloadURL().then((url) => {
+            console.log(url); // URL can be used to display the file
+            this.imageUrl = url;
+          });
+        });
+      });
+    // this.imageUrl = this.imageService.getImageDownloadURL();
+    // console.log(this.imageUrl);
   }
 }

@@ -1,0 +1,13 @@
+{
+  "hosting": {
+    "public": "public/browser",
+    "site": "snapbykeerthyy-13235-50dd4",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

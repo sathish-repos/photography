@@ -1,21 +1,21 @@
 <div class="portfolio m-5" id="portfolio">
   <h5 class="portfolio__heading">Portfolio</h5>
   <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-    <div class="col">
+    <div class="col" *ngFor="let fileUrl of files">
       <div class="card shadow-sm">
         <div class="card-image">
           <a
-            href="portfolio/wedding_10.jpg"
+            [href]="fileUrl"
             data-toggle="lightbox"
             data-caption="caption-image"
             data-gallery="photo_gallery"
           >
-            <img src="portfolio/wedding_10.jpg" class="img-fluid" alt="" />
+            <img [src]="fileUrl" class="img-fluid" alt="" />
           </a>
         </div>
       </div>
     </div>
-    <div class="col">
+    <!-- <div class="col">
       <div class="card shadow-sm">
         <div class="card-image">
           <a
@@ -168,6 +168,6 @@
           </a>
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
 </div>
